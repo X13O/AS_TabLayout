@@ -6,10 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+<!-- TabLayout dan ViewPager adalah 2 dependensi yg berbeda sehingga librari nya perlu ditambahkan pada gradle -->
+<!--    TabLayout memerlukan ViewPager-->
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tabLayout"/>
+<!--    ViewPager berguna untuk user agar bisa swipe kiri/kanan-->
+<!--    ViewPager berguna untuk merender 3 fragment, yaitu berita, ecommercer, dan kampus-->
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+// MyFragmentPagerAdapter ini berguna untuk merender 3 buah fragment
+
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
     private BeritaFragment _beritaFragment = new BeritaFragment();
     private ECommerceFragment _eCommerceFragment = new ECommerceFragment();
@@ -14,13 +16,14 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
     private Context _context;
     private int _tabCount;
 
-    public MyFragmentPagerAdapter(Context context, FragmentManager fragmentManager, int tabCount) {
-        super(fragmentManager);
-
-        _context = context;
-        _tabCount = tabCount;
+//    Cara generate otomatis adalah klik kanan, pilih generate, constructor, pilih yang atas + ok, pilih context dan tabCount
+    public MyFragmentPagerAdapter(@NonNull FragmentManager fm, Context _context, int _tabCount) {
+        super(fm);
+        this._context = _context;
+        this._tabCount = _tabCount;
     }
 
+//    GetItem berguna untuk fragment mana yang akan di loading, dari kiri dimulai dari 0.
     @NonNull
     @Override
     public Fragment getItem(int position) {
@@ -34,6 +37,7 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
         }
         return null;
     }
+
 
     @Override
     public int getCount() {

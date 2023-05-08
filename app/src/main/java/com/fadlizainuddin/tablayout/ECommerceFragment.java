@@ -63,6 +63,7 @@ public class ECommerceFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+//        Inflater berguna untuk menyisipkan fragment yang dirancang kedalam ViewPager atau layar
         View view = inflater.inflate(R.layout.fragment_e_commerce, container, false);
 
         _webView = view.findViewById(R.id.eCommerceWebView);
